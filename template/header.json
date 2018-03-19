@@ -1,7 +1,7 @@
 {
-          "Invocation"  : "Deloitte testssl.sh summarized json file",
-          "at"          : "kali:$PWD/bin/openssl.Linux.x86_64",
-          "version"     : "2.9dev 415f98b from 2018-02-19",
-          "openssl"     : "OpenSSL 1.0.2-chacha from Jun 22 19:32:29 2016",
+          "Invocation"  : "testssl.sh summarized json file",
+          "at"          : "--",
+          "version"     : "--",
+          "openssl"     : "--",
           "startTime"   : "1521118830",
           "scanResult"  : [
