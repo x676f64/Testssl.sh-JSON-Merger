@@ -57,3 +57,4 @@ rm *.json
 echo "[+] Generate final Excel file"
 echo "... - ... - ... - ... - ... -"
 python $TESTSSL_PATH"/testssl2xlsx.py" -iJ ../summerized_scans.json
+rm ../summerized_scans.json
