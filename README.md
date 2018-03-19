@@ -7,7 +7,7 @@ Nevertheless, using some parallization, one can scan several hosts and store the
 For each host, you may executed the following to get your json files:\
 `./testssl.sh --warnings=batch --openssl-timeout=60 --json-pretty <IP>:<PORT>`
 
-However, if you want to use a parser like [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) to generate a nicely formatted spread sheet for your customers etc. you'll notice that it only accepts a single JSON file .. but we've got many of them, since testssl.sh does only scan single-hosts or IPs.
+However, if you want to use a parser like [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) to generate a nicely formatted spread sheet for your customers etc. you'll notice that it only accepts one single JSON file.. but we've got many of them!
 
 Therefore, we have to merge all *.json files to a single file that works with the parser ;-)
 
