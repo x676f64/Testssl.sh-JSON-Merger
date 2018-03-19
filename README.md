@@ -24,4 +24,4 @@ Note: Modified *.json output files are stored in the **/backup_scans** folder fo
 I've added some additional parsing features for the [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) parser. If you use my testssl2xlsx_v2.py script, you will get the following additional information in your spread sheet:
 
 - Host vs. Ciphers
-- Host vs. CipherTests
+- Host vs. CipherTests (currently exports ciphers with < 129 bits; can be changed in the testssl2xlsx_v2.py script)
