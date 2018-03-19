@@ -1,5 +1,5 @@
 #!/bin/bash
-TESTSSL_PATH="testssl2xlsx_v2.py"
+TESTSSL_PATH="../testssl2xlsx_v2.py"
 
 echo "[!] Please store all your scan results as pretty json files in the scans directory."
 echo "[!] The script will modify the files and generate a final Excel file :-)"
