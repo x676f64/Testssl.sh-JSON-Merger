@@ -17,6 +17,6 @@ Therefore, we have to merge all *.json files to a single file that works with th
 3. Execute with `sh merge.sh`
 4. You'll find your spread sheet in the **/scan/** directory.
 
-Note: Your modified testssl.sh *.json output files are stored in the **/backup_scans** folder. -- useless --
+Note: Modified *.json output files are stored in the **/backup_scans** folder for debugging purpose.
 
 
