@@ -25,3 +25,5 @@ I've added some additional parsing features for the [testssl2xlsx.py](https://gi
 
 - Host vs. Ciphers
 - Host vs. CipherTests (currently exports ciphers with < 129 bits; can be changed in the testssl2xlsx_v2.py script)
+
+Note: Spread sheet cells may need futher formatting in order to display data correctly.
