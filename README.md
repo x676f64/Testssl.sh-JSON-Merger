@@ -11,7 +11,7 @@ However, if you want to use a parser like [testssl2xlsx.py](https://github.com/A
 
 Therefore, we have to merge all *.json files to a single file that works with the parser!
 
-# Usage:
+## Usage:
 1. Place all your testssl.sh *.json output files into the **/scan/** directory
 2. Check the path variable of `testssl2xlsx.py` in the `merge.sh` script
 3. Execute with `sh merge.sh`
@@ -20,3 +20,8 @@ Therefore, we have to merge all *.json files to a single file that works with th
 Note: Modified *.json output files are stored in the **/backup_scans** folder for debugging purpose.
 
 
+## Update:
+I've added some additional parsing features for the [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) parser. If you use my testssl2xlsx_v2.py script, you will get the following additional information in your spread sheet:
+
+- Host vs. Ciphers
+- Host vs. CipherTests
