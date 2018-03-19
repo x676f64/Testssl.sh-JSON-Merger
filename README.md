@@ -2,7 +2,7 @@
 This quick-n-dirty shell script merges several testssl.sh pretty-JSON files to one single JSON file. Useful if executing an SSL/TLS scan for a large host or IP range and utilizing the testssl2xlsx.py parser for generating a customer spread sheet.
 
 For each host, you may executed the following to get your json files:
- `./testssl.sh --warnings=batch --openssl-timeout=60 --json-pretty <IP>:<PORT>`
+`./testssl.sh --warnings=batch --openssl-timeout=60 --json-pretty <IP>:<PORT>`
 
 The [testssl.sh](https://github.com/drwetter/testssl.sh) script by drwetter usually only accepts single hosts or IPs to scan.
 Nevertheless, using some parallization, one can scan several hosts and store the output in a nice pretty-JSON format.
