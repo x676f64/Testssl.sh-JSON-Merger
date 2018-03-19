@@ -12,7 +12,8 @@ echo "... - ... - ... - ... - ... -"
 cd scans
 # remove first 7 lines of each json file
 echo "[+] Remove first 7 lines"
-sed -i '1,7d' *.json
+sed -i '/\[/,$!d' *.json
+sed -i '1,1d' *.json
 
 # remove last 4 lines of all scan json files
 echo "[+] Remove last 4 lines"
