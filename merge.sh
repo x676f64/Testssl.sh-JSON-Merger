@@ -1,5 +1,5 @@
 #!/bin/bash
-TESTSSL_PATH="/root/Documents/PenTest/tools/testssl2xlsx/"
+TESTSSL_PATH="testssl2xlsx_v2.py"
 
 echo "[!] Please store all your scan results as pretty json files in the scans directory."
 echo "[!] The script will modify the files and generate a final Excel file :-)"
@@ -56,5 +56,5 @@ rm *.json
 # generate the Excel file
 echo "[+] Generate final Excel file"
 echo "... - ... - ... - ... - ... -"
-python $TESTSSL_PATH"/testssl2xlsx_v2.py" -iJ ../summerized_scans.json
+python $TESTSSL_PATH -iJ ../summerized_scans.json
 rm ../summerized_scans.json
