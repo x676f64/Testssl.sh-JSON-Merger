@@ -11,12 +11,12 @@ echo "... - ... - ... - ... - ... -"
 
 cd scans
 # remove first 7 lines of each json file
-echo "[+] Remove first 7 lines"
+echo "[+] Remove preamble lines"
 sed -i '/\[/,$!d' *.json
 sed -i '1,1d' *.json
 
 # remove last 4 lines of all scan json files
-echo "[+] Remove last 4 lines"
+echo "[+] Remove epilog lines"
 for filename in *.json; do
 	# reverse json file
 	tac $filename > /tmp/rev.json
@@ -57,4 +57,6 @@ rm *.json
 echo "[+] Generate final Excel file"
 echo "... - ... - ... - ... - ... -"
 python $TESTSSL_PATH -iJ ../summerized_scans.json
+
+# comment this line to keep the final merged file
 rm ../summerized_scans.json
