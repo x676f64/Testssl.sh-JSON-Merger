@@ -108,6 +108,9 @@ vulnerabilities = {
     },
     "LOGJAM-common_primes": {
         "name": "LOGJAM - common_primes"
+    },
+    "BEAST_CBC_TLS1": {
+        "name": "BEAST_CBC_TLS1"
     }
 }
 
