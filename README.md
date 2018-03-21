@@ -8,7 +8,9 @@ For each host, you may execute the following command in a loop to get all your j
 
 If you then want to use the parser [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) to generate a nicely formatted spread sheet with all your observations, you'll notice that it only accepts one single JSON file. However, we've got a JSON file for each host we scanned :(
 
-Therefore, we first have to merge all *.json files to a single file that works with the parser! Just use my `merge.sh` script :-)
+Therefore, we first have to merge all *.json files to a single file that works with the parser! 
+
+Just use my `merge.sh` script :-)
 
 ## Usage:
 1. Place all your testssl.sh *.json output files into the **/scan/** directory
