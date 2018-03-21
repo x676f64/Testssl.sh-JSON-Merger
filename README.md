@@ -1,5 +1,5 @@
 # Testssl.sh-JSON-Merger
-This quick-n-dirty shell script merges several testssl.sh pretty-JSON files to one single JSON file. Useful if utilizing the testssl2xlsx.py parser for generating a customer spread sheet and having several hosts to scan/report (e.g. large host or IP range).
+This quick-n-dirty shell script merges several [testssl.sh](https://github.com/drwetter/testssl.sh) pretty-JSON files to one single JSON file. Useful if utilizing the testssl2xlsx.py parser for generating a customer spread sheet and having several hosts to scan/report (e.g. large host or IP range).
 
 The [testssl.sh](https://github.com/drwetter/testssl.sh) script by drwetter only accepts a single host or IP to scan. Specifying several hosts immediately is not supported. Nevertheless, using some parallelization, one can start the testssl.sh script several times and scan multiple hosts. The output should be stored in the pretty-JSON format if you plan to use the testssl2xlsx.py parser.
 
