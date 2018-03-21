@@ -87,6 +87,27 @@ vulnerabilities = {
     },
     "SWEET32": {
         "name": "Sweet32"
+    },
+    "heartbleed": {
+        "name": "Heartbleed"
+    },
+    "CCS": {
+        "name": "CCS"
+    },
+    "ticketbleed": {
+        "name": "ticketbleed"
+    },
+    "secure_renego": {
+        "name": "Secure Renegotiation"
+    },
+    "DROWN": {
+        "name": "DROWN"
+    },
+    "LOGJAM": {
+        "name": "LOGJAM"
+    },
+    "LOGJAM-common_primes": {
+        "name": "LOGJAM - common_primes"
     }
 }
 
