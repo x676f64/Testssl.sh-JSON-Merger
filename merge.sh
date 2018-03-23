@@ -1,4 +1,7 @@
 #!/bin/bash
+# Merge script for testssl.sh 2.9dev from https://testssl.sh/dev/
+# (a178f3e 2018-03-18 23:38:23 -- )
+
 TESTSSL_PATH="../testssl2xlsx_v2.py"
 
 echo "[!] Please store all your scan results as pretty json files in the scans directory."
