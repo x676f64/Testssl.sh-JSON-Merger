@@ -12,6 +12,8 @@ Therefore, we first have to merge all *.json files to a single file that works w
 
 Just use my `merge.sh` script :-)
 
+Note: The **/scan/** directory contains example *.json files. Replace them with your files.
+
 ## Usage:
 1. Place all your testssl.sh *.json output files into the **/scan/** directory
 2. Check the path variable of `testssl2xlsx.py` in the `merge.sh` script
