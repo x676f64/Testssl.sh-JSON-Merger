@@ -17,6 +17,10 @@ echo "[+] Remove interrupted scan files"
 grep -l '"scanTime"  : "Scan interrupted"' *.json > /tmp/ignored.log
 find . -type f -exec grep -q '"scanTime"  : "Scan interrupted"' {} \; -delete 
 
+# backup scans
+echo "[+] Backup all scan files"
+cp *.json backup_scans/.
+
 # remove first 7 lines of each json file
 echo "[+] Remove preamble lines"
 sed -i '/\[/,$!d' *.json
@@ -35,7 +39,7 @@ for filename in *.json; do
 	tac /tmp/rev2.json > "New"_$filename
 	#cp "New"_$filename debug/.
 	# clean
-	rm /tmp/*.json && mv $filename backup_scans/.
+	rm /tmp/*.json && rm $filename
 done
 
 # generate the final file with starting header
