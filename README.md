@@ -15,7 +15,7 @@ Just use my `merge.sh` script :-)
 Note: The **/scan/** directory contains example *.json files. Replace them with your files.
 
 ## Installation:
-pip -r install requirements.txt
+`pip -r install requirements.txt`
 
 ## Usage:
 1. Place all your testssl.sh *.json output files into the **/scan/** directory
