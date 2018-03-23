@@ -10,6 +10,10 @@ echo "[!] Developed by Laurent Vetter"
 echo "... - ... - ... - ... - ... -"
 
 cd scans
+# remove interrupted scans
+echo "[+] Remove interrupted scan files"
+find . -type f -exec grep -q '"scanTime"  : "Scan interrupted"' {} \; -delete 
+
 # remove first 7 lines of each json file
 echo "[+] Remove preamble lines"
 sed -i '/\[/,$!d' *.json
@@ -26,6 +30,7 @@ for filename in *.json; do
 	sed -i '1,1d' /tmp/rev2.json
 	# reverse again
 	tac /tmp/rev2.json > "New"_$filename
+	#cp "New"_$filename debug/.
 	# clean
 	rm /tmp/*.json && mv $filename backup_scans/.
 done
@@ -37,8 +42,7 @@ cat ../template/header.json > ../summerized_scans.json
 # append each json file to the scanresult section of our final json file
 echo "[+] Append all json files"
 for file in *.json; do
-	cat $file >> ../summerized_scans.json
-	echo "," >> ../summerized_scans.json
+	cat $file >> ../summerized_scans.json && echo "," >> ../summerized_scans.json
 done
 
 # remove the last comma of the file
