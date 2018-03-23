@@ -12,14 +12,15 @@ echo "[!] Developed by Laurent Vetter"
 echo "... - ... - ... - ... - ... -"
 
 cd scans
-# remove interrupted scans
-echo "[+] Remove interrupted scan files"
-grep -l '"scanTime"  : "Scan interrupted"' *.json > /tmp/ignored.log
-find . -type f -exec grep -q '"scanTime"  : "Scan interrupted"' {} \; -delete 
 
 # backup scans
 echo "[+] Backup all scan files"
 cp *.json backup_scans/.
+
+# remove interrupted scans
+echo "[+] Remove interrupted scan files"
+grep -l '"scanTime"  : "Scan interrupted"' *.json > /tmp/ignored.log
+find . -type f -exec grep -q '"scanTime"  : "Scan interrupted"' {} \; -delete 
 
 # remove first 7 lines of each json file
 echo "[+] Remove preamble lines"
