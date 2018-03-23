@@ -12,16 +12,16 @@ Therefore, we first have to merge all *.json files to a single file that works w
 
 Just use my `merge.sh` script :-)
 
-Note: The **/scan/** directory contains example *.json files. Replace them with your files.
+Note: The **/scan** directory contains example *.json files. Replace them with your files.
 
 ## Installation:
 `pip -r install requirements.txt`
 
 ## Usage:
-1. Place all your testssl.sh *.json output files into the **/scan/** directory
+1. Place all your testssl.sh *.json output files into the **/scan** directory
 2. Check the path variable of `testssl2xlsx.py` in the `merge.sh` script
 3. Execute with `sh merge.sh`
-4. You'll find your spread sheet in the **/scan/** directory.
+4. You'll find your spread sheet in the **/scan** directory.
 
 Note: Your *.json files are stored in the **/backup_scans** folder.
 
