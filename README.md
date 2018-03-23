@@ -23,7 +23,7 @@ Note: The **/scan/** directory contains example *.json files. Replace them with 
 3. Execute with `sh merge.sh`
 4. You'll find your spread sheet in the **/scan/** directory.
 
-Note: Modified *.json output files are stored in the **/backup_scans** folder for debugging purpose. Can be deleted.
+Note: Your *.json files are stored in the **/backup_scans** folder.
 
 
 ## Update:
