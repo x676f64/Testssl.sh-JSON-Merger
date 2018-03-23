@@ -6,12 +6,12 @@ echo "[!] The script will modify the files and generate a final Excel file :-)"
 echo "[!] Your intial json files will be backuped in the backup_scans directory."
 echo "[!] The final Excel file can be found in the scans directory."
 echo "[!] Developed by Laurent Vetter"
-
 echo "... - ... - ... - ... - ... -"
 
 cd scans
 # remove interrupted scans
 echo "[+] Remove interrupted scan files"
+grep -l '"scanTime"  : "Scan interrupted"' *.json > /tmp/ignored.log
 find . -type f -exec grep -q '"scanTime"  : "Scan interrupted"' {} \; -delete 
 
 # remove first 7 lines of each json file
@@ -64,3 +64,10 @@ python $TESTSSL_PATH -iJ ../summerized_scans.json
 
 # comment this line to keep the final merged file
 rm ../summerized_scans.json
+
+# info
+echo '\nIf you received an `ValueError: Expecting property name` error, one of your json files has a missing `"finding":"xxx"` property.'
+
+# show ignored files
+echo "\nThe following files have been ignored due to interrupted testssl scan:"
+cat /tmp/ignored.log
