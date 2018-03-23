@@ -203,7 +203,8 @@ def insert2(headers, d, min_bits):
     for key, values in d.items():
         if isinstance(values, dict):
             text = values.get("severity")[::-1]
-            bits = int(text.split("      ",1)[1][:3][::-1])
+            bits = re.split(r' +', values.get("severity"))[-2]
+            bits = int(filter(str.isdigit, str(bits)))
             cipher = re.split(r' +', values.get("severity"))[1]
 
             if bits < min_bits:
