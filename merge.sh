@@ -74,7 +74,7 @@ python $TESTSSL_PATH -iJ ../summerized_scans.json
 rm ../summerized_scans.json
 
 # info
-echo '\nIf you received an `ValueError: Expecting property name` error, one of your json files has a missing `"finding":"xxx"` property. This is currently still a bug of the Python parser.'
+echo '\nIf you received an `ValueError: Expecting property name` error, one of your json files has a missing `"finding":"xxx"` property.\nThis is currently still a bug of the Python parser.'
 
 # show ignored files
 echo "\nThe following files have been ignored due to interrupted testssl scan:"
