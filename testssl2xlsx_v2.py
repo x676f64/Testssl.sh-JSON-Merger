@@ -201,6 +201,7 @@ def insert2(headers, d, min_bits):
     data = [""] * len(headers)
 
     for key, values in d.items():
+      try:
         if isinstance(values, dict):
             text = values.get("severity")[::-1]
             bits = re.split(r' +', values.get("severity"))[-2]
@@ -211,7 +212,9 @@ def insert2(headers, d, min_bits):
                 data[headers.index(values["name"])] += "%s [%d bits]\n" % (cipher,bits)
         else:
             data[headers.index(key)] = values
-
+      except:
+      	print "Skipping - Parsing error"
+      	data[headers.index(values["name"])] += "-- Parsing Error --\n"
     return data
 
 
