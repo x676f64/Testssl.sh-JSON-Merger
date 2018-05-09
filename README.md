@@ -3,7 +3,7 @@ This quick-n-dirty shell script merges several [testssl.sh](https://github.com/d
 
 The `testssl.sh` script by drwetter only accepts a single host or IP to scan. Specifying several hosts immediately, with one final export file is not supported. Nevertheless, using some parallelization, one can start the `testssl.sh` script several times and scan multiple hosts. Each output should be stored in the pretty-JSON format if you plan to use the `testssl2xlsx.py` parser.
 
-For each host, you may execute the following command to get all your json files (use e.g. `parallel`):\
+For each host, you should execute the following command to get all your json files:\
 `./testssl.sh --json-pretty <IP>:<PORT>`
 
 If you then want to use the parser [testssl2xlsx.py](https://github.com/AresS31/testssl2xlsx) to generate a nicely formatted spread sheet with all your observations, you'll notice that it only accepts one single JSON file. However, we've got a JSON file for each host we scanned :(
@@ -33,3 +33,14 @@ I've added some additional parsing features for the `testssl2xlsx.py` parser. If
 - Host vs. CipherTests (currently exports ciphers with < 129 bits; can be changed in the testssl2xlsx_v2.py script)
 
 Note: You may need to adjust the spread sheet cell's height in order to display data correctly.
+
+## Note for scanning several hosts:
+You can create a new text file and specify in each line the command to execute for an IP address and port. 
+This should look something like this, e.g. `hosts.txt`:
+
+`/bin/bash /<your_path_to_testssl>/testssl.sh --json-pretty <ip>:<port>
+/bin/bash /<your_path_to_testssl>/testssl.sh --json-pretty <ip>:<port>
+/bin/bash /<your_path_to_testssl>/testssl.sh --json-pretty <ip>:<port>`
+
+After that, you can use `parallel` to start all the scans simultaneously:
+`parallel < host.txt`
