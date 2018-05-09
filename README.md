@@ -44,4 +44,5 @@ This should look something like this, e.g. `hosts.txt`:
 ```
 
 After that, you can use `parallel` to start all the scans simultaneously:
+
 `parallel < host.txt`
